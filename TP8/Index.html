@@ -1,0 +1,870 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>ExtentReports</title>
+        <link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+        <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+	    <link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@6fbbd1c32fbc2463d026da5c6ce2e9eef0d29512/spark/css/spark-style.css" rel="stylesheet" />
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<style type="text/css">
+
+</style></head>    <script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/7cc78ce/spark/js/jsontree.js"></script>
+<body class="spa bdd-report standard">
+    <div class="app header-dark side-nav-folded">
+        <div class="layout">
+<div class="header navbar">
+    <div class="vheader">
+        <div class="nav-logo">
+          <a href="#">
+            <div class="logo logo-dark" style="background-image: url('https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png')"></div>
+            <div class="logo logo-white" style="background-image: url('https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png')"></div>
+          </a>
+        </div>
+        <ul class="nav-left">
+          <li class="search-box">
+            <a class="search-toggle" href="javascript:void(0);">
+              <i class="search-icon fa fa-search"></i>
+              <i class="search-icon-close fa fa-close"></i>
+            </a>
+          </li>
+          <li class="search-input">
+            <input id="search-tests" class="form-control" type="text" placeholder="Type to search...">
+          </li>
+        </ul>
+        <ul class="nav-right">
+          <li class="m-r-10">
+            <a href="#">
+              <span class="badge badge-primary">ExtentReports</span>
+            </a>
+          </li>
+            <li class="m-r-10">
+                <a href="#">
+                    <span class="badge badge-primary">sept 13, 2024 12:45:00 p. m.</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div><div class="side-nav">
+  <div class="side-nav-inner">
+    <ul class="side-nav-menu scrollable">
+      <li class="nav-item dropdown" onclick="toggleView('test-view')">
+        <a id="nav-test" class="dropdown-toggle" href="index.html">
+          <span class="icon-holder">
+            <i class="fa fa-align-left"></i>
+          </span>
+          <span class="title">Tests</span>
+        </a>
+      </li>
+            <li class="nav-item dropdown" onclick="toggleView('tag-view')">
+        <a id="nav-tag" class="dropdown-toggle" href="tag.html">
+          <span class="icon-holder">
+            <i class="fa fa-tag"></i>
+          </span>
+          <span class="title">Tags</span>
+        </a>
+      </li>
+      <li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+        <a id="nav-dashboard" class="dropdown-toggle" href="dashboard.html">
+          <span class="icon-holder">
+            <i class="fa fa-bar-chart"></i>
+          </span>
+          <span class="title">Dashboard</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>            <div class="vcontainer">
+                <div class="main-content">
+<div class="test-wrapper row test-view">
+	<div class="test-list">
+		<div class="test-list-tools">
+			<ul class="tools pull-left">
+				<li>
+					<a href="">
+					<span class="font-size-14">Tests</span>
+					</a>
+				</li>
+			</ul>
+			<ul class="tools text-right">
+				<li class="user-profile dropdown dropdown-animated scale-left">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					<i class="fa fa-exclamation-circle"></i>
+					</a>
+					<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+						<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success pull-right"></span></a>
+						<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger pull-right"></span></a>
+						
+						
+						
+						<a class="dropdown-item" status="skip" href="#"><span>Skip</span><span class="status warning pull-right"></span></a>
+						<div class="dropdown-divider"></div>
+						<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+					</ul>
+				</li>
+				<li class="user-profile dropdown dropdown-animated scale-left">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					<i class="fa fa-tag"></i>
+					</a>
+					<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+						<a class="dropdown-item" href="#">@Clockify</a>
+						<a class="dropdown-item" href="#">@Login</a>
+						<a class="dropdown-item" href="#">@AddDedication</a>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="test-list-wrapper scrollable">
+			<ul class="test-list-item">
+				<li class="test-item"  status="fail" test-id="1"
+					author=""
+					tag="@Clockify"
+					device="">
+					<div class="status-avatar fail-bg">
+						<i class="fa fa-times text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">As a potential client I want to interact with the mobile application</p>
+							<p class="duration text-sm">0h 1m 55s+756ms</p>
+							<span class="datetime">12:45:00 p. m.</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-fail">As a potential client I want to interact with the mobile application</h5>
+									<span class='badge badge-success'>09.13.2024 12:45:00</span>
+									<span class='badge badge-danger'>09.13.2024 12:46:56</span>
+									<span class='badge badge-default'>0h 1m 55s+756ms</span>
+								</div>
+								<div class="m-t-15">
+			<span class="badge badge-pill badge-default"><i class="fa fa-tag"></i> @Clockify</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+
+<div class="accordion mt-4">
+	<div class="card">
+		<div class="card-header" role="tab">
+			<div class="card-title pl-3">
+				<div class="node">Log in with existing user</div>
+				<div class="status-avatar float-left fail-bg">
+					<i class="fa fa-times text-white"></i>
+				</div>
+					<div class="status-avatar float-right mr-4">
+						<i class="fa fa-paperclip"></i>
+					</div>
+			</div>
+		</div>
+				<div class="collapse">
+					<div class="card-body">
+							<div class="d-flex align-items-center justify-content-start given" title="ClockifyLoginSteps.isLoginPageVisible()">
+								<span class="alert-icon fail-bg">
+									<i class="fa fa-times text-white"></i>
+								</span>
+								<span>Given The app Clockify is loaded correctly</span>
+							</div>
+				<div class="details"><textarea readonly class='code-block'>
+  java.lang.RuntimeException: Error creating driver
+	at com.crowdar.driver.DriverFactory.createDriver(DriverFactory.java:99)
+	at com.crowdar.driver.DriverFactory.createDriver(DriverFactory.java:33)
+	at com.crowdar.driver.DriverManager.getDriverInstance(DriverManager.java:49)
+	at com.crowdar.core.actions.ActionManager.getFluentWait(ActionManager.java:49)
+	at com.crowdar.core.actions.ActionManager.waitVisibility(ActionManager.java:189)
+	at com.crowdar.examples.services.ClockifyLoginService.isViewLoaded(ClockifyLoginService.java:16)
+	at com.crowdar.examples.steps.ClockifyLoginSteps.isLoginPageVisible(ClockifyLoginSteps.java:17)
+	at ?.The app Clockify is loaded correctly(file:src/test/resources/features/Clockify.feature:5)
+Caused by: org.openqa.selenium.SessionNotCreatedException: Unable to create a new remote session. Please check the server log for more details. Original error: An unknown server-side error occurred while processing the command. Original error: Cannot start the 'me.clockify.android' application. Consider checking the driver's troubleshooting documentation. Original error: 'me.clockify.android.presenter.SplashActivity' or 'me.clockify.android.me.clockify.android.presenter.SplashActivity' never started. Consider checking the driver's troubleshooting documentation.
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'MSI', ip: '192.168.1.9', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: driver.version: AndroidDriver
+remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Cannot start the 'me.clockify.android' application. Consider checking the driver's troubleshooting documentation. Original error: 'me.clockify.android.presenter.SplashActivity' or 'me.clockify.android.me.clockify.android.presenter.SplashActivity' never started. Consider checking the driver's troubleshooting documentation.
+    at getResponseForW3CError (C:\Users\alexi\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.js:1145:9)
+    at asyncHandler (C:\Users\alexi\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:485:57)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'MSI', ip: '192.168.1.9', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: driver.version: AndroidDriver
+	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:208)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:217)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+	at io.appium.java_client.DefaultGenericMobileDriver.<init>(DefaultGenericMobileDriver.java:37)
+	at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:86)
+	at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:96)
+	at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:94)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.crowdar.driver.DriverFactory.createDriver(DriverFactory.java:90)
+	at com.crowdar.driver.DriverFactory.createDriver(DriverFactory.java:33)
+	at com.crowdar.driver.DriverManager.getDriverInstance(DriverManager.java:49)
+	at com.crowdar.core.actions.ActionManager.getFluentWait(ActionManager.java:49)
+	at com.crowdar.core.actions.ActionManager.waitVisibility(ActionManager.java:189)
+	at com.crowdar.examples.services.ClockifyLoginService.isViewLoaded(ClockifyLoginService.java:16)
+	at com.crowdar.examples.steps.ClockifyLoginSteps.isLoginPageVisible(ClockifyLoginSteps.java:17)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at cucumber.runtime.Utils$1.call(Utils.java:26)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+	at cucumber.runtime.Utils.invoke(Utils.java:20)
+	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:57)
+	at cucumber.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:50)
+	at cucumber.runner.TestStep.executeStep(TestStep.java:65)
+	at cucumber.runner.TestStep.run(TestStep.java:50)
+	at cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:43)
+	at cucumber.runner.TestCase.run(TestCase.java:46)
+	at cucumber.runner.Runner.runPickle(Runner.java:50)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:79)
+	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:24)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:27)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:186)
+	... 62 more
+Caused by: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Cannot start the 'me.clockify.android' application. Consider checking the driver's troubleshooting documentation. Original error: 'me.clockify.android.presenter.SplashActivity' or 'me.clockify.android.me.clockify.android.presenter.SplashActivity' never started. Consider checking the driver's troubleshooting documentation.
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'MSI', ip: '192.168.1.9', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: driver.version: AndroidDriver
+remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Cannot start the 'me.clockify.android' application. Consider checking the driver's troubleshooting documentation. Original error: 'me.clockify.android.presenter.SplashActivity' or 'me.clockify.android.me.clockify.android.presenter.SplashActivity' never started. Consider checking the driver's troubleshooting documentation.
+    at getResponseForW3CError (C:\Users\alexi\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.js:1145:9)
+    at asyncHandler (C:\Users\alexi\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:485:57)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	... 67 more
+
+</textarea></div>
+				<div class="details"><a href='data:image/png;base64,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gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AACtul3AAAIABJREFUAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8gQMAAAAoT+AAAAAAyhM4AAAAgPIEDgAAAKA8geP/Z+/eg+ws6wSP/0736UvuJA1JuBPAQAzREUgAo3JzUSPojNdxx0VQZhyQEhdwZ3fH3ZktR9fZmS3AtcpaLrEcd9QBSx1gzYhEkEFBAgYJBIkhIdEgBBJChyR9O+fsH2wrIgihz3vO+Z3z+VRRVFFdz/vw1/v2t58LAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKQncAAAAADpCRwAAABAegIHAAAAkJ7AAQAAAKRXbvYEAID2sWssYk8lYk+l9ut/D1UihqsRU8oR08qlmN4TMb2nFJO7mz1bAKCdCBwAwF772c5arNlRiQeersa9O6px/9PVeGRXba/HmfH/Y8f0cilm9kYcOqUrjpnRFQumd8XCGV0xb0qpgNkDAO2oVKvV9v5rBADoGE+PRtyytRK3bq3EHU9W4p6nqg179qzeiLftX4637t8db51bjpm9DXs0AJCMwAEA/JZdYxG3PVGJHzzxbNS4e3vjgsZLOXGgK846oBzLDuiORTMcJQYA/IbAAQDErrGI6x8di2s3j8UNj1aaPZ2X5cBJpfjDg8rx9v2744y5DvQAgE4ncABAB7v+0Up89ZHRuOHRSgy3zkKNvTa5O+Kt+3fH+w7pifccJHYAQCcSOACgw/xqqBZ/++BofHnjaOwca/Zs6m+/vlJccGRPXPCqnhhwZgcAdAyBAwA6xObdtfjvD47EVQ+3YdV4ER89ohyXHN0bh7uNBQDansABAG3uoZ21+Mzakfj65rGoduBbvxQRf3hgd/zFgt44fpaDSQGgXQkcANCmtg7X4pLVI/G1zZ2zYuOlrDpjUrxuH5EDANpRudkTAADqa6wWcflDo/HptSOxS9uIiIjuUsS3lvaJGwDQxgQOAGgjP3yyEh+5azjWP2OB5rhyKeKbS/ti2QE+ewCgnXnTA0AbeGyoFh//yXB885eVZk+l5XxjaX8sO8DVsQDQ7gQOAEjuR09W4l0/HIonh5s9k9ZSLkXc+Mb+ePNccQMAOoGNqACQ2N//bDROuUXceD5xAwA6jxUcAJDQrrFa/Mmdw3Hjo7akPJ+4AQCdSeAAgGQeHKzGH90+5CDRFyBuAEDnskUFABJZ+Xgllnxvj7jxAuoZN1atWhUbNmyow6wAgEYROAAgiW/8YizedttQ7LEr5Xf0dtUvbqxevTqWL18el19+eWzcuLEOswMAGkHgAIAE/vbB0fjjO4ajauHG7+jtiljxpvrFjSuvvDKq1WoMDw/HZZddJnIAQBKlWq3mUwkAWlStVosLfzIS//vhsWZPpSWNx42TZ9c3bjxXX19fXHrppXHIIYdM+BkAQHEEDgBoYe/70VB885etvydlek/E/GldMX9aVxwxtRTTys/+M7UnYmq5FFPLETvHIp4ZrcXgaMTOsVrsGK3FL3fXYsueWmzZXY0te2qxey//V797cn+cPqe4uDFu0qRJcfHFF4scANDCBA4AaFEfuWs4vvxIa67ceMO+XXHanHKcPLs7jp5Wijn9pbqMu3awGjc/VomVj1fi1icqsev3/O83Km6MEzkAoLUJHADQgv7jfSPx9z8bbfY0fm2fnoiz5/XEW+Z2xxv3647JDbqF9datlfjWlkp8bdNobB/5zX//3in9cWqB21JejMgBAK1L4ACAFnPZQ6PxyZ+OvPQPNsBb53bHOYf3xHsOalDR+D2+v7US124ei/cfUm5K3BgncgBAaxI4AKCFfOWRsTj3ruGmzmFaOeLj83viz4/sif3rtPWk1bzSuDFO5ACA1iNwAECLuOmxSiy7bahpzz9gUikuPqon/uyInoZtQWmGu+++O6666qoJjzNz5sz43Oc+V4cZAQD1UG72BACAiC17avHBO5sTN6b3RPyP1/bFeYe3/2fB6tWr45prrpnwOP39/fGxj32sDjMCAOql/b9kAKDFVWu1+MCPhn7rEM1GOXdeOT732r4Y6G38sxttottSxvX398ell14aBx98cJ1mBgDUg8ABAE32V/ePxo+2TeyX7r119LRSXL2kP04c6Groc5tl1apVsXz5cnEDANqYMzgAoIlu3VqJN9/a2K0p7zqoO768pC8mldvzANHnW7VqVVx99dUTHkfcAIDWZgUHADTJ40O1eN+PGhc3uksRf/fa3vj4/J6GPbPZxA0A6BwCBwA0yQX3DDfs3I39+krxzTf0x0kdsiUlQtwAgE4jcABAE9z02Fj885ZKQ561YHop/uVN/XHgZHFjb4kbAJCHwAEADbZnrBZ/uqoxSzf+zZzuuO71fTG1pzPO24gQNwCgU3XOn3IAoEX81QOjsWVP8Wd8/+kR5Vhxcr+48QqIGwCQj1tUAKCB7n+6GsfetCeqBb99/+jA7rj29X1RKokbe0vcAICcbFEBgAb66N3DhceNY2d2xVdO7I8OahviBgBgiwoANMqNj1bix9uqhT7jwEml+M6b+qO/u9DHtBRxAwCIsIIDABrms2uLPVi0vzviOyf3x759nbN0o15xY/LkyXHxxReLGwCQmMABAA1wy9ZK3LW92NUbX17SFwund87izHrGjU9+8pNxwAEH1GFWAECzdM5XEAA00eceHC10/I8cXo53H9w5f7cQNwCA5xM4AKBgP3mqEisfrxQ2/qIZpfj863oLG7/ViBsAwAsROACgYJ9ZW+zqjeuWToq+7s44d0PcAABejMABAAV6dE81/nlLcas3PvXqnjhyqrixN8QNAGhPAgcAFOjLjxQXNw6bUor/tKCnsPFbibgBALwUgQMACnTNhuK2p1yzuK8jtqaIGwDAyyFwAEBBVm2vxiO7aoWMfdYB3XHy7O5Cxm4l4gYA8HIJHABQkH94ZKywsS89uv1vTRE3AIC9IXAAQAFGq7X46qZitqccN7Mrlu7b3q/wp556qm5x45JLLhE3AKADtPfXEQA0yXcfq8bTBR2/8ZcL23/1xsyZM+PDH/5wlEqv/IyR8ZUbBx10UB1nBgC0KoEDAArwvceLuT3lqGmleMcB7X/2RkTECSecEOeee+4rihy2pQBA5xE4AKAA33+8mPM3Pnx4Z1wLO248cuwNcQMAOpPAAQB1tnWoFg8O1v/2lFJEnH1oue7jtroTTjghzj777Jf1s+IGAHQugQMA6mzl1mK2p5wxtzv263/lZ1JktnTp0peMHOIGAHQ2gQMA6uz7BZ2/8e8O67zVG8/1+yKHuAEACBwAUGdFBY53HtjZgSPihSOHuAEARAgcAFBXvxqqxabd9T9/4037dcWkzrg85SU9N3KIGwDAOH8KAoA6enCwWsi4p8z2yn6upUuXRkTEYYcdJm4AABEhcABAXa0r4PaUiIhTZ1u+8XzjkQMAIELgAIC6+tnO+q/g6O2KOGkgz+0pGzZsiHvuuSfWr18f27dvj8HBwZg1a1YMDAzEwoULY8mSJTEwMNDsaQIAbaZUq9WK+VMTAHSgZbcNxU2P1feQ0RMHuuL20yfVdcwi3HfffXHDDTfE5s2bf+/PlUqlOPbYY+Od73xnzJkzp0GzAwDanRUcAFBHDxVwBsdR01r7TPBKpRJf+tKXYtWqVS/r52u1Wtxzzz2xevXqOOecc+KEE04oeIYAQCdo7S8mAEhkuFLMDSoLprfu63pkZCSuuOKKlx03nqtarcby5ctjxYoVBcwMAOg0rfvFBADJbN5TzLhHt2jgGBsbi89//vPx0EMPTWicb3/727Fy5co6zQoA6FSt+cUEAAntqRRzrNVRLRo4VqzJzQaRAAAgAElEQVRYET//+c/rMta1114bW7ZsqctYAEBnas0vJgBIaM9YMePu01PMuBOxa9euuOmmm+o65re+9a26jgcAdBaBAwDqZKj+54tGRER/d+tdEXv77bfHyMhIXcdcs2ZN7Nixo65jAgCdQ+AAgDopaotKXwu+re+7775Cxr333nsLGRcAaH8t+MkEADkNVYoZt7cF39br168vZNx169YVMi4A0P5a8JMJAHIaLmAFR3933YecsJ07dxY29rZt2wobGwBobwIHANTJaDE7VFpOvc/eeK4i4wkA0N4EDgCok0kFHAZa1LaXiZg6dWrKsQGA9iZwAECdTCsXM+5oQbezvFJ9fX0xZcqUQsYeGBgoZFwAoP0JHABQJ9N6irnOtajrZyfiVa96VapxAYD2J3AAQJ1MLWgFx3ALblNZtGhRIeMed9xxhYwLALQ/gQMA6mRauZgVHE+OtN7ppYsXL677NpVFixbFjBkz6jomANA5BA4AqJOitqhsfKb19qj09fXFsmXL6jZeqVSK9773vXUbDwDoPAIHANTJQG8x427e3XorOCIiTjvttJg3b15dxjrrrLNizpw5dRkLAOhMAgcA1NHc/vqv4tjQgis4IiK6urriwgsvjH333XdC4xx//PHx9re/vU6zAgA6lcABAHU0f1r9A8cju1ozcERETJ06NT71qU+9okNHu7u7493vfnecd955BcwMAOg0pVqt1prrXgEgoT+/eziu3jBW1zHnTyvF2rdNruuYRbj//vvj+uuvj02bNv3en+vq6orFixfHmWeeGbNnz27Q7ACAdlfQhXYA0JmOmlb/xZHrdtZicLQW0ws6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pCdwAAAAAOkJHAAAAEB6AgcAAACQnsABAAAApCdwAAAAAOkJHAAAAEB6AgcAAACQnsABAAAApCdwAAAAAOkJHAAAAEB6AgcAAACQnsABAAAApCdwAAAAAOkJHAAAAEB6AgcAAACQnsABAAAApCdwAAAAAOkJHAAAAEB6AgcAAACQnsABAAAApCdwAAAAAOkJHAAAAEB6AgcAAACQnsABAAAApCdwAAAAAOkJHAAAAEB6AgcAAACQnsABAAAApCdwAAAAAOkJHAAAAEB6AgcAAACQnsABAAAApCdwAAAAAOkJHAAAAEB6AgcAAACQnsABAAAApCdwAAAAAOkJHAAAAEB6AgcAAACQnsABAAAApCdwAAAAAOkJHAAAAEB6AgcAAACQnsABAAAApCdwAAAAAOkJHAAAAEB6AgcAAACQnsABAAAApCdwAAAAAOkJHAAAAEB6AgcAAACQnsABAAAApCdwAAAAAOkJHAAAAEB6AgcAAACQnsABAAAApCdwAAAAAOkJHAAAAEB6AgcAAACQnsABAAAApCdwAAAAAOkJHAAAAEB6AgcAAACQnsABAAAApCdwAAAAAOkJHAAAAEB6AgcAAACQnsABAAAApCdwAAAAAOkJHAAAAEB6AgcAAACQnsABAAAApCdwAAAAAOkJHAAAAEB6AgcAAACQnsABAAAApCdwAAAAAOkJHAAAAEB6AgcAAACQnsABAAAApCdwAAAAAOkJHAAAAEB6AgcAAACQnsABAAAApCdwAAAAAOkJHAAAAEB6AgcAAACQnsABAAAApCdwAAAAAOkJHAAAAEB6AgcAAACQnsABAAAApCdwAAAAAOkJHAAAAEB6AgcAAACQnsABAAAApCdwAAAAAOkJHAAAAEB6AgcAAACQnsABAAAApCdwAAAAAOkJHAAAAEB6AgcAAACQnsABAAAApCdwAAAAAOkJHAAAAEB6AgcAAACQnsABAAAApCdwAAAAAOkJHAAAAEB6AgcAAACQnsABAAAApCdwAAAAAOkJHAAAAEB6AgcAAACQnsABAAAApCdwAAAAAOkJHAAAAEB6AgcAAACQnsABAAAApCdwAAAAAOkJHAAAAEB6AgcAAACQnsABAAAApCdwAAAAAOkJHAAAAEB6AgcAAACQnsABAAAApCdwAAAAAOkJHAAAAEB6AgcAAACQnsABAAAApCdwAAAAAOkJHAAAAEB6AgcAAACQnsABAAAApCdwAAAAAOkJHAAAAEB6AgcAAACQnsABAAAApCdwAAAAAOkJHAAAAEB6AgcAAACQnsABAAAApCdwAAAAAOkJHAAAAEB6AgcAAACQnsABAAAApCdwAAAAwP9r745tKtfCMIqe0RuJhBKo4kpU4gKcIprg0YRF6gJoxSkN0ISjmRo8o9HRhrUq+CIHW0e/yRM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIE/O+t28AAAmXSURBVDgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIC8H2OMX7NHAAAAAPwNLzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyBM4AAAAgDyBAwAAAMgTOAAAAIA8gQMAAADIEzgAAACAPIEDAAAAyPs5ewAATcuyjHVdx+12G3d3d7PnAHHneY7jOMa+7+P9/X32HACCfowxfs0eAUDL6+vreH5+nj0D+KK2bRsvLy+zZwAQI3AAcMmyLOPt7W32DOCLe3p68pIDgEvc4ADgknVdZ08AvgHfGgCu8oIDgEs+Pz/d3AD+ufM8x8PDw+wZAIR4wQEAAADkCRwAXHIcx+wJwDfgWwPAVQIHAJfs+z57AvAN+NYAcNV/Y4z/Z48AoOPj42Pc39+Px8fH2VOAL2rbtrFt2+wZAMQ4MgrAH1mWZazrOm63m6OjwF87z3McxzH2ffd7WAD+iMABAAAA5LnBAQAAAOQJHAAAAECewAEAAADkCRwAAABAnsABAAAA5AkcAAAAQJ7AAQAAAOQJHAAAAECewAEAAADkCRwAAABAnsABAAAA5AkcAAAAQJ7AAQAAAOQJHAAAAECewAEAAADkCRwAAABAnsABAAAA5AkcAAAAQJ7AAQAAAOQJHAAAAECewAEAAADkCRwAAABAnsABAAAA5AkcAAAAQJ7AAQAAAOT9BqJvvBeYkJwvAAAAAElFTkSuQmCC' data-featherlight='image'><span class='label grey badge white-text text-white'>base64-img</span></a></div>
+							<div class="d-flex align-items-center justify-content-start when" title="ClockifyLoginSteps.doLoginProcess()">
+								<span class="alert-icon skip-bg">
+									<i class="fa fa-long-arrow-right text-white"></i>
+								</span>
+								<span>When The user logs in Clockify with existing user</span>
+							</div>
+				<div class="details">Step skipped</div>
+							<div class="d-flex align-items-center justify-content-start then" title="ClockifyHomeSteps.isHomePageVisible()">
+								<span class="alert-icon skip-bg">
+									<i class="fa fa-long-arrow-right text-white"></i>
+								</span>
+								<span>Then The clockify home page is displayed</span>
+							</div>
+				<div class="details">Step skipped</div>
+					</div>
+				</div>
+	</div>
+	<div class="card">
+		<div class="card-header" role="tab">
+			<div class="card-title pl-3">
+				<div class="node">Add new dedication</div>
+				<div class="status-avatar float-left pass-bg">
+					<i class="fa fa-check text-white"></i>
+				</div>
+			</div>
+		</div>
+				<div class="collapse">
+					<div class="card-body">
+							<div class="d-flex align-items-center justify-content-start given" title="ClockifyLoginSteps.isLoginPageVisible()">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>Given The app Clockify is loaded correctly</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start when" title="ClockifyLoginSteps.doLoginProcess()">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>When The user logs in Clockify with existing user</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start when" title="ClockifyCommonSteps.tapOnFloatingActionButton()">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>When I tap the '+' button to create a new dedication</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="ClockifyAddEntrySteps.iDefineTheStartTimeAndTheEndTime(String,String,String,String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And I define the start time 07:00 and the end time 15:00</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="ClockifyAddEntrySteps.iSetsTheDescription(String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And I sets the description 'LippiaMobileTest'</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="ClockifyCommonSteps.tapOnFloatingActionButton()">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And Save the changes</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start then" title="ClockifyHomeSteps.theDedicationIsDisplayed(String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>Then The dedication 'LippiaMobileTest' is displayed</span>
+							</div>
+				<div class="details"></div>
+					</div>
+				</div>
+	</div>
+</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="test-content scrollable">
+		<div class="test-content-tools">
+			<ul>
+				<li>
+					<a class="back-to-test" href="javascript:void(0)">
+					<i class="fa fa-arrow-left"></i>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="test-content-detail">
+			<div class="detail-body"></div>
+		</div>
+	</div>
+</div><div class="test-wrapper row tag-view attributes-view">
+	<div class="test-list">
+		<div class="test-list-tools">
+			<ul class="tools pull-left">
+				<li>
+					<a href="">
+					<span class="font-size-14">Tags</span>
+					</a>
+				</li>
+			</ul>
+			<ul class="tools text-right">
+				<li>
+					<a href="#">
+					<span class="badge badge-primary">3</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="test-list-wrapper scrollable">
+			<ul class="test-list-item">
+				<li class="test-item">
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">@Clockify</p>
+							<p class="duration text-sm">3 tests</p>
+							<span class="datetime">
+							<span class='badge badge-success'>1</span>
+							<span class='badge badge-danger'>1</span>
+							
+							
+							</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="info">
+							<h4>@Clockify</h4>
+							<span status="pass" class='badge badge-success'>1 passed</span>
+							<span status="fail" class='badge badge-danger'>1 failed</span>
+							
+							
+						</div>
+						<table class='table table-sm mt-4'>
+							<thead>
+								<tr>
+									<th class="status-col">Status</th>
+									<th class="timestamp-col">Timestamp</th>
+									<th>TestName</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="tag-test-status" status="fail">
+									<td>
+										<div class='status-avatar fail-bg'>
+											<i class="fa fa-times text-white"></i>
+										</div>
+									</td>
+									<td>12:45:00 p. m.</td>
+									<td class='linked' test-id='1'>
+										As a potential client I want to interact with the mobile application
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="fail">
+									<td>
+										<div class='status-avatar fail-bg'>
+											<i class="fa fa-times text-white"></i>
+										</div>
+									</td>
+									<td>12:45:00 p. m.</td>
+									<td class='linked' test-id='2'>
+										Log in with existing user
+										<div class="">
+											<span class="badge badge-default">As a potential client I want to interact with the mobile application.Log in with existing user</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>12:45:42 p. m.</td>
+									<td class='linked' test-id='10'>
+										Add new dedication
+										<div class="">
+											<span class="badge badge-default">As a potential client I want to interact with the mobile application.Add new dedication</span>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</li>
+				<li class="test-item">
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">@Login</p>
+							<p class="duration text-sm">1 tests</p>
+							<span class="datetime">
+							
+							<span class='badge badge-danger'>1</span>
+							
+							
+							</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="info">
+							<h4>@Login</h4>
+							
+							<span status="fail" class='badge badge-danger'>1 failed</span>
+							
+							
+						</div>
+						<table class='table table-sm mt-4'>
+							<thead>
+								<tr>
+									<th class="status-col">Status</th>
+									<th class="timestamp-col">Timestamp</th>
+									<th>TestName</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="tag-test-status" status="fail">
+									<td>
+										<div class='status-avatar fail-bg'>
+											<i class="fa fa-times text-white"></i>
+										</div>
+									</td>
+									<td>12:45:00 p. m.</td>
+									<td class='linked' test-id='2'>
+										Log in with existing user
+										<div class="">
+											<span class="badge badge-default">As a potential client I want to interact with the mobile application.Log in with existing user</span>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</li>
+				<li class="test-item">
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">@AddDedication</p>
+							<p class="duration text-sm">1 tests</p>
+							<span class="datetime">
+							<span class='badge badge-success'>1</span>
+							
+							
+							
+							</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="info">
+							<h4>@AddDedication</h4>
+							<span status="pass" class='badge badge-success'>1 passed</span>
+							
+							
+							
+						</div>
+						<table class='table table-sm mt-4'>
+							<thead>
+								<tr>
+									<th class="status-col">Status</th>
+									<th class="timestamp-col">Timestamp</th>
+									<th>TestName</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>12:45:42 p. m.</td>
+									<td class='linked' test-id='10'>
+										Add new dedication
+										<div class="">
+											<span class="badge badge-default">As a potential client I want to interact with the mobile application.Add new dedication</span>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="test-content scrollable">
+		<div class="test-content-tools">
+			<ul>
+				<li>
+					<a class="back-to-test" href="javascript:void(0)">
+					<i class="fa fa-arrow-left"></i>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="test-content-detail">
+			<div class="detail-body"></div>
+		</div>
+	</div>
+</div>                    <!-- dashboard -->
+<div class="container-fluid p-4 dashboard-view">
+	<div class="row">
+		<div class="col-sm-12 col-md-4">
+			<div class="card">
+				<div class="card-header">
+					<h6 class="card-title">Features</h6>
+				</div>
+				<div class="card-body">
+					<div class="">
+						<canvas id='parent-analysis' width='115' height='90'></canvas>
+					</div>
+				</div>
+				<div class="card-footer">
+					<div><small data-tooltip='0%'>
+						<b>0</b> features passed
+						</small>
+					</div>
+					<div>
+						<small data-tooltip='100%'><b>1</b> features failed, 
+						<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+						</small>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-12 col-md-4">
+			<div class="card">
+				<div class="card-header">
+					<h6 class="card-title">Scenarios</h6>
+				</div>
+				<div class="card-body">
+					<div class="">
+						<canvas id='child-analysis' width='115' height='90'></canvas>
+					</div>
+				</div>
+				<div class="card-footer">
+					<div><small data-tooltip='50%'><b>1</b> scenarios passed</small></div>
+					<div>
+						<small data-tooltip='50%'><b>1</b> scenarios failed, 
+						<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+						</small>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-12 col-md-4">
+			<div class="card">
+				<div class="card-header">
+					<h6 class="card-title">Steps</h6>
+				</div>
+				<div class="card-body">
+					<div class="">
+						<canvas id='grandchild-analysis' width='115' height='90'></canvas>
+					</div>
+				</div>
+				<div class="card-footer">
+					<div><small data-tooltip='70%'><b>7</b> steps passed</small></div>
+					<div>
+						<small data-tooltip='10%'><b>1</b> steps failed, 
+						<b>2</b> skipped, <b data-tooltip='20%'>0</b> others
+						</small>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3">
+			<div class="card">
+				<div class="card-body box-height-150">
+					<div class="media justify-content-between">
+						<div class="card-header">
+							<h6 class="card-title">Features</h6>
+							<h2 class="font-size-28 font-weight-light mt-3">1</h2>
+							<span class="text-semibold text-success font-size-15">
+							<i class="ti-arrow-up font-size-11"></i> 
+							<span>,00%</span>
+							</span>
+						</div>
+						<div class="align-self-end">
+							<i class="fa fa-align-left font-size-70 opacity-01"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="card">
+				<div class="card-body box-height-150">
+					<div class="media justify-content-between">
+						<div class="card-header">
+							<h6 class="card-title">Scenarios</h6>
+							<h2 class="font-size-28 font-weight-light mt-3">2</h2>
+							<span class="text-semibold text-success font-size-15">
+							<i class="ti-arrow-up font-size-11"></i> 
+							<span>50,00%</span>
+							</span>
+						</div>
+						<div class="align-self-end">
+							<i class="fa fa-align-left font-size-70 opacity-01"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="card">
+				<div class="card-body box-height-150">
+					<div class="media justify-content-between">
+						<div class="card-header">
+							<h6 class="card-title">Start</h6>
+							<h4 class="font-weight-light mt-4">sept 13, 2024 12:45:00 p. m.</h4>
+							<span class="text-semibold text-success font-size-15">
+						</div>
+						<div class="align-self-end">
+							<i class="fa fa-clock-o font-size-70 text-success opacity-01"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="card">
+				<div class="card-body box-height-150">
+					<div class="media justify-content-between">
+						<div class="card-header">
+							<h6 class="card-title">Duration</h6>
+							<h4 class="font-weight-light mt-4">0h 1m 57s+651ms</h4>
+							<span class="text-semibold font-size-15">
+						</div>
+						<div class="align-self-end">
+							<i class="fa fa-clock-o font-size-70 opacity-01"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="card">
+				<div class="card-header">
+					<h6 class="card-title">Timeline</h6>
+				</div>
+				<div class="card-body">
+					<div class="">
+						<canvas id="timeline" height="120"></canvas>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			<div class="card">
+				<div class="card-header">
+					<h6 class="card-title">Tags</h6>
+				</div>
+				<div class="table-overflow">
+					<table class="table table-sm">
+						<thead>
+							<tr class="bg-gray">
+								<th>Name</th>
+								<th>Passed</th>
+								<th>Failed</th>
+								<th>Skipped</th>
+								<th>Others</th>
+								<th>Passed %</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>@Clockify</td>
+								<td>1</td>
+								<td>1</td>
+								<td>0</td>
+								<td>0</td>
+								<td>
+									33,333%
+								</td>
+							</tr>
+							<tr>
+								<td>@Login</td>
+								<td>0</td>
+								<td>1</td>
+								<td>0</td>
+								<td>0</td>
+								<td>
+									0%
+								</td>
+							</tr>
+							<tr>
+								<td>@AddDedication</td>
+								<td>1</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>
+									100%
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	var statusGroup = {
+	    parentCount: 1,
+		passParent: 0,
+		failParent: 1,
+		fatalParent: 0,
+		errorParent: 0,
+		warningParent: 0,
+		skipParent: 0,
+		exceptionsParent: 1,
+		childCount: 2,
+		passChild: 1,
+		failChild: 1,
+		fatalChild: 0,
+		errorChild: 0,
+		warningChild: 0,
+		skipChild: 0,
+		infoChild: 0,
+		debugChild: 0,
+		exceptionsChild: 1,
+		grandChildCount: 10,
+		passGrandChild: 7,
+		failGrandChild: 1,
+		fatalGrandChild: 0,
+		errorGrandChild: 0,
+		warningGrandChild: 0,
+		skipGrandChild: 2,
+		infoGrandChild: 0,
+		debugGrandChild: 0,
+		exceptionsGrandChild: 3,
+		eventsCount: 10,
+		passEvents: 7,
+		failEvents: 1,
+		fatalEvents: 0,
+		errorEvents: 0,
+		warningEvents: 0,
+		skipEvents: 2,
+		infoEvents: 0,
+		debugEvents: 0,
+		exceptionsEvents: 0
+	};
+</script>
+<script>
+	var timeline = {
+	        "As a potential client I want to interact with the mobile application":115.756
+	};
+</script>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ac7abbc71b4bb073da00153a5a3fdbcfe0c95e2a/spark/js/spark-script.js"></script>
+<script type="text/javascript">
+
+
+</script></body>
+</html>
